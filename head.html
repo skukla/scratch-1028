@@ -63,3 +63,40 @@
 <link rel="modulepreload" href="/scripts/__dropins__/tools/preact-compat.js" />
 <link rel="modulepreload" href="/scripts/__dropins__/tools/preact-hooks.js" />
 <link rel="modulepreload" href="/scripts/__dropins__/tools/components.js" />
+
+
+<!-- === Smart 404 PDP eager redirect (Demo Builder) === -->
+<script nonce="aem">
+  (function () {
+    if (document.prerendering) return;
+    var p = location.pathname;
+    var m = p.match(/^\/products\/([^/]+)\/([^/]+)$/);
+    if (m) {
+      var lc = '/products/' + m[1].toLowerCase() + '/' + m[2].toLowerCase();
+      // Mixed case: redirect to lowercase before any paint
+      if (lc !== p) {
+        location.replace(lc);
+        return;
+      }
+    } else if (!/^(?:\/[a-z0-9-]+)+$/.test(p) || p === '/404'
+      || p === '/categories/default' || p === '/products/default') {
+      // Neither a product nor a category address: not ours.
+      return;
+    }
+    // Already lowercase. If this is a 404 page (cold path: page never
+    // published), the storefront's default 404 chrome could paint before
+    // the recovery script at the end of the body runs. Hide just the
+    // <main> (not the whole body) so the storefront's header and footer
+    // — populated by scripts.js as usual — stay visible while we wait.
+    // User sees real storefront chrome around a loading area, not a
+    // blank page. On non-404 pages window.isErrorPage is undefined so
+    // we skip the hide.
+    if (window.isErrorPage && !new URLSearchParams(location.search).has('pdpRetry')) {
+      var s = document.createElement('style');
+      s.id = 'smart-404-cold-hide';
+      s.textContent = 'main { visibility: hidden; }';
+      document.head.appendChild(s);
+    }
+  })();
+</script>
+<!-- === end Smart 404 PDP eager redirect === -->
