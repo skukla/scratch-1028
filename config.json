@@ -6,16 +6,16 @@
       "commerce-assets-enabled": true,
       "headers": {
         "all": {
-          "Store": "justrite_us"
+          "Store": "justrite_test_store_us"
         },
         "cs": {
-          "AC-View-ID": "72f05148-18f3-41b1-844f-2d9593b176cf",
-          "AC-Source-Locale": "de-CH"
+          "AC-View-ID": "530e8896-c711-4d7b-b309-0ccb8873aa18",
+          "AC-Source-Locale": "en-US"
         }
       },
       "analytics": {
         "environment-id": "X2duJmy3FaTKf1Mmr4GiQY",
-        "view-id": "72f05148-18f3-41b1-844f-2d9593b176cf",
+        "view-id": "530e8896-c711-4d7b-b309-0ccb8873aa18",
         "base-currency-code": "USD",
         "store-view-currency-code": "USD",
         "store-url": "https://main--scratch-1028--skukla.aem.live/"
