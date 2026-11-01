@@ -1,31 +1,26 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://na1-sandbox.api.commerce.adobe.com/UoGYsHrcxMyeoVd2zUktZi/graphql",
-      "commerce-endpoint": "https://na1-sandbox.api.commerce.adobe.com/UoGYsHrcxMyeoVd2zUktZi/graphql",
+      "commerce-core-endpoint": "https://edge-sandbox-graph.adobe.io/api/194205a6-ca6f-4959-a392-b36ea225b29c/graphql",
+      "commerce-endpoint": "https://na1-sandbox.api.commerce.adobe.com/X2duJmy3FaTKf1Mmr4GiQY/graphql",
       "commerce-assets-enabled": true,
       "headers": {
         "all": {
           "Store": "justrite_us"
         },
         "cs": {
-          "Magento-Customer-Group": "",
-          "Magento-Store-Code": "justrite_store",
-          "Magento-Store-View-Code": "justrite_us",
-          "Magento-Website-Code": "justrite"
+          "AC-View-ID": "72f05148-18f3-41b1-844f-2d9593b176cf",
+          "AC-Source-Locale": "de-CH"
         }
       },
       "analytics": {
+        "environment-id": "X2duJmy3FaTKf1Mmr4GiQY",
+        "view-id": "72f05148-18f3-41b1-844f-2d9593b176cf",
         "base-currency-code": "USD",
-        "environment": "Production",
-        "store-id": 1,
-        "store-name": "Main Website Store",
-        "store-url": "https://main--scratch-1028--skukla.aem.live/",
-        "store-view-id": 1,
-        "store-view-name": "Default Store View",
-        "website-id": 1,
-        "website-name": "Main Website"
+        "store-view-currency-code": "USD",
+        "store-url": "https://main--scratch-1028--skukla.aem.live/"
       },
+      "adobe-commerce-optimizer": true,
       "commerce-b2b-enabled": true,
       "commerce-companies-enabled": true
     }
