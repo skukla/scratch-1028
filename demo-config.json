@@ -1,18 +1,18 @@
 {
   "public": {
     "default": {
-      "commerce-core-endpoint": "https://na1-sandbox.api.commerce.adobe.com/UoGYsHrcxMyeoVd2zUktZi/graphql",
-      "commerce-endpoint": "https://na1-sandbox.api.commerce.adobe.com/UoGYsHrcxMyeoVd2zUktZi/graphql",
+      "commerce-core-endpoint": "https://edge-graph.adobe.io/api/4e9c09c6-cc4f-4e75-95de-d8ae5e43a6dd/graphql",
+      "commerce-endpoint": "https://edge-graph.adobe.io/api/4e9c09c6-cc4f-4e75-95de-d8ae5e43a6dd/graphql",
       "commerce-assets-enabled": true,
       "headers": {
         "all": {
-          "Store": "justrite_us"
+          "Store": "justrite_test_store_us"
         },
         "cs": {
           "Magento-Customer-Group": "",
-          "Magento-Store-Code": "justrite_store",
-          "Magento-Store-View-Code": "justrite_us",
-          "Magento-Website-Code": "justrite"
+          "Magento-Store-Code": "justrite_test_store",
+          "Magento-Store-View-Code": "justrite_test_store_us",
+          "Magento-Website-Code": "justrite_test_website"
         }
       },
       "analytics": {
