@@ -1,0 +1,57 @@
+{
+  "kind": "demo",
+  "version": 2,
+  "name": "Scratch 1028",
+  "description": "My package",
+  "configDefaults": {
+    "ACCS_GRAPHQL_ENDPOINT": "https://na1-sandbox.api.commerce.adobe.com/UoGYsHrcxMyeoVd2zUktZi/graphql",
+    "ADOBE_COMMERCE_WEBSITE_CODE": "justrite_test_website",
+    "ACCS_WEBSITE_CODE": "justrite_test_website",
+    "ADOBE_COMMERCE_STORE_CODE": "justrite_test_store",
+    "ACCS_STORE_CODE": "justrite_test_store",
+    "ADOBE_COMMERCE_STORE_VIEW_CODE": "justrite_test_store_us",
+    "ACCS_STORE_VIEW_CODE": "justrite_test_store_us"
+  },
+  "configFlags": {
+    "commerce-b2b-enabled": true,
+    "commerce-companies-enabled": true
+  },
+  "requiresMesh": false,
+  "datapack": {
+    "name": "release-save-test-2-50de15",
+    "version": "20261117-203431",
+    "store": "library"
+  },
+  "contentSource": {
+    "org": "skukla",
+    "site": "scratch-1028",
+    "indexPath": "/sitemap.json"
+  },
+  "builtWith": {
+    "package": "starter",
+    "template": {
+      "owner": "adobe-commerce",
+      "repo": "boilerplate-b2b-template"
+    },
+    "lkg": "f8eb94d5fd42d164a21e7894e4e47a502564a626",
+    "codePatchSource": {
+      "owner": "skukla",
+      "repo": "eds-demo-patches",
+      "path": "b2b",
+      "lkgFile": "b2b/last-known-good"
+    },
+    "codePatches": [
+      "header-nav-tools-defensive",
+      "aem-assets-sku-sanitization",
+      "pdp-empty-data-redirect",
+      "plp-search-skeleton",
+      "plp-search-url-after-first-result",
+      "pdp-loading-skeleton"
+    ],
+    "boilerplate": {
+      "name": "@adobe/aem-boilerplate-commerce",
+      "version": "7.0.0"
+    },
+    "extension": "1.0.0-beta.152"
+  }
+}
