@@ -132,14 +132,6 @@ await initializeDropin(async () => {
     return loadErrorPage();
   }
 
-  // A published PDP whose SKU no longer resolves serves 200 from the content
-  // bus, so the CDN-404 redirect never runs. fetchProductData resolves null
-  // for an unknown SKU — send the shopper to the native 404 rather than
-  // mounting an empty product block. (Demo Builder warm-path guard.)
-  if (!product && !IS_UE) {
-    return loadErrorPage();
-  }
-
   const langDefinitions = {
     default: {
       ...labels,
